@@ -1,0 +1,22 @@
+{
+  "timestamp": 1792080470.0283964,
+  "applied_config": {
+    "n_nodes": 15,
+    "k_bucket_size": 3,
+    "alpha": 3,
+    "replication_factor": 3,
+    "replication_quorum": 2,
+    "record_ttl": 240,
+    "tunnel_relay_count": 3,
+    "tunnel_pool_size": 3,
+    "timeout": 2.5
+  },
+  "steps": {
+    "step_1_bootstrap": "PASS",
+    "step_2_dht_lookup": "PASS",
+    "step_3_storage_churn": "PASS",
+    "step_4_tunnel_delivery": "PASS",
+    "step_5_failover_recovery": "PASS"
+  },
+  "final_verdict": "ALL ACCEPTANCE CRITERIA SATISFIED"
+}

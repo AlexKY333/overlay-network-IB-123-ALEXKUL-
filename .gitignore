@@ -1,0 +1,31 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*~
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example

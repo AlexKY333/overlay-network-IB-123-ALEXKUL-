@@ -1,0 +1,21 @@
+{
+    "iterations": 1000,
+    "candidate_count": 5,
+    "admissible_count": 5,
+    "random": {
+        "selection_counts": {
+            "1": 190,
+            "2": 208,
+            "3": 207,
+            "4": 202,
+            "5": 193
+        },
+        "average_latency": 0.4222
+    },
+    "ranked": {
+        "selection_counts": {
+            "3": 1000
+        },
+        "average_latency": 0.10000000000000002
+    }
+}

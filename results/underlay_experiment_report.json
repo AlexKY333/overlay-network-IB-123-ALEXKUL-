@@ -1,0 +1,32 @@
+{
+  "scenario": "isolated_underlay_and_netem",
+  "configuration": {
+    "n_nodes": 20,
+    "k_bucket_size": 4,
+    "alpha": 3,
+    "replication_factor": 3,
+    "left_subnet": "172.28.1.0/24",
+    "right_subnet": "172.28.2.0/24",
+    "netem_delay_ms": 150,
+    "netem_jitter_ms": 10
+  },
+  "observations": 5,
+  "netem_applied": true,
+  "direct_ip_blocked": true,
+  "tunnel_delivery_success": true,
+  "latency_stats_s": {
+    "min": 0.5889,
+    "max": 0.896,
+    "median": 0.6157,
+    "average": 0.6649,
+    "raw_samples": [
+      0.896,
+      0.5889,
+      0.6157,
+      0.6036,
+      0.6202
+    ]
+  },
+  "measured_latency_s": 0.6649,
+  "relay_ema_latency": 0.7267
+}

@@ -1,0 +1,1347 @@
+{
+    "configuration": {
+        "node_count": 20,
+        "k_bucket_size": 4,
+        "alpha": 3,
+        "trials": 5,
+        "schemes": [
+            "star",
+            "ring",
+            "tree",
+            "multi_seed"
+        ],
+        "controlled_node_ids": true
+    },
+    "raw_results": [
+        {
+            "scheme": "star",
+            "node_count": 20,
+            "node_ids": [
+                "9c56f3e2f1246ea5abbd934d7ffdd5a1f2252a9e5f9a798a076451fd0a45d016",
+                "6fdb0cf0af48ca089e09e09f9dec3b703edc73ab44be5456ccab246365d95aec",
+                "ac03e31d3f76a8a0ffe59b69962aa61d88f6bc32105f46be26efc7d5c6e4b017",
+                "a93c08a510f1f2046e6cd5ab2c2abdcaaaa62029d0e1cbb96d0d1272ff3bbfe5",
+                "7826db115727159cb26616730f844f8e7ec5675a901095491b91fc92e55fc8cc",
+                "bd95d9f72b0019f13d259a5587540dbd0a8a0bb54e864ec6cabcd3ffe0b5107f",
+                "eecd3f600bd79269b1d5b178559c1c67758b4ec429e62b12a464b5fa78561f0e",
+                "054e73c33956590eabbb04c2724860aa64076336b10638c0baeb889649b1ab09",
+                "996399e952ae16a8b512bf024f3ca8111a6221c8debbd9d6630da9fb1240c19f",
+                "b41d36fd8cf582a74a827377ba8d90cd6dc2238b4adf31f15b699bd2ad49e4f1",
+                "72cbde0cb2102dea87c5f24867c322d00f6f4046e9ac5457ca371ec24693dae9",
+                "f252ccabc3eeb35200d0ac6e3e331c0744c032ef802948a156651e1d899db508",
+                "d474864ae6a18318da68e97f3639b0704dd3de18ff26b1c9305943469efb02bd",
+                "8032f81798ec94c5ea83dabf4d768debfded2515d3ee3528f24c8d7e669b6db8",
+                "ff23cbfc6da4b13d2a0daf877e60369026bc6f26ed35177e3c80b3b8c170d557",
+                "b4fdbf66b8ab237928b44a15dcbefd674c755b2d511db8e217822c696b37b7ba",
+                "0538800484440aba1bfc82a5749570328760a3e2d5ae7e66b11c7cd168233154",
+                "a456db73f2f0a1b5e65d8d5ee3d63bea8e92b1ba8cdb674b3ee2e7d79ff1ec36",
+                "1eed2f69db61ffc5b7d4d96d55b2d8d5061bdbe8647e48694c81ae45537157d4",
+                "37d2930c68aec85b019b524b32a51d8d1d10d43c6bcf9256934d767f31f4585a"
+            ],
+            "rounds": 4,
+            "total_discovered": 105,
+            "total_rpc": 194,
+            "convergence_time": 0.5305101000703871,
+            "average_contacts": 7.75,
+            "min_contacts": 4,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 3.75,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "054e73c33956590e",
+                    "0538800484440aba",
+                    "1eed2f69db61ffc5"
+                ],
+                "bucket_254": [
+                    "6fdb0cf0af48ca08",
+                    "7826db115727159c",
+                    "72cbde0cb2102dea"
+                ],
+                "bucket_255": [
+                    "9c56f3e2f1246ea5"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 1
+        },
+        {
+            "scheme": "ring",
+            "node_count": 20,
+            "node_ids": [
+                "9c56f3e2f1246ea5abbd934d7ffdd5a1f2252a9e5f9a798a076451fd0a45d016",
+                "6fdb0cf0af48ca089e09e09f9dec3b703edc73ab44be5456ccab246365d95aec",
+                "ac03e31d3f76a8a0ffe59b69962aa61d88f6bc32105f46be26efc7d5c6e4b017",
+                "a93c08a510f1f2046e6cd5ab2c2abdcaaaa62029d0e1cbb96d0d1272ff3bbfe5",
+                "7826db115727159cb26616730f844f8e7ec5675a901095491b91fc92e55fc8cc",
+                "bd95d9f72b0019f13d259a5587540dbd0a8a0bb54e864ec6cabcd3ffe0b5107f",
+                "eecd3f600bd79269b1d5b178559c1c67758b4ec429e62b12a464b5fa78561f0e",
+                "054e73c33956590eabbb04c2724860aa64076336b10638c0baeb889649b1ab09",
+                "996399e952ae16a8b512bf024f3ca8111a6221c8debbd9d6630da9fb1240c19f",
+                "b41d36fd8cf582a74a827377ba8d90cd6dc2238b4adf31f15b699bd2ad49e4f1",
+                "72cbde0cb2102dea87c5f24867c322d00f6f4046e9ac5457ca371ec24693dae9",
+                "f252ccabc3eeb35200d0ac6e3e331c0744c032ef802948a156651e1d899db508",
+                "d474864ae6a18318da68e97f3639b0704dd3de18ff26b1c9305943469efb02bd",
+                "8032f81798ec94c5ea83dabf4d768debfded2515d3ee3528f24c8d7e669b6db8",
+                "ff23cbfc6da4b13d2a0daf877e60369026bc6f26ed35177e3c80b3b8c170d557",
+                "b4fdbf66b8ab237928b44a15dcbefd674c755b2d511db8e217822c696b37b7ba",
+                "0538800484440aba1bfc82a5749570328760a3e2d5ae7e66b11c7cd168233154",
+                "a456db73f2f0a1b5e65d8d5ee3d63bea8e92b1ba8cdb674b3ee2e7d79ff1ec36",
+                "1eed2f69db61ffc5b7d4d96d55b2d8d5061bdbe8647e48694c81ae45537157d4",
+                "37d2930c68aec85b019b524b32a51d8d1d10d43c6bcf9256934d767f31f4585a"
+            ],
+            "rounds": 5,
+            "total_discovered": 233,
+            "total_rpc": 264,
+            "convergence_time": 0.6827312998939306,
+            "average_contacts": 12.1,
+            "min_contacts": 10,
+            "max_contacts": 16,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.65,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "0538800484440aba",
+                    "1eed2f69db61ffc5",
+                    "054e73c33956590e"
+                ],
+                "bucket_254": [
+                    "7826db115727159c",
+                    "6fdb0cf0af48ca08",
+                    "72cbde0cb2102dea"
+                ],
+                "bucket_255": [
+                    "9c56f3e2f1246ea5",
+                    "ac03e31d3f76a8a0",
+                    "b4fdbf66b8ab2379",
+                    "a456db73f2f0a1b5"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0804,
+            "trial": 1
+        },
+        {
+            "scheme": "tree",
+            "node_count": 20,
+            "node_ids": [
+                "9c56f3e2f1246ea5abbd934d7ffdd5a1f2252a9e5f9a798a076451fd0a45d016",
+                "6fdb0cf0af48ca089e09e09f9dec3b703edc73ab44be5456ccab246365d95aec",
+                "ac03e31d3f76a8a0ffe59b69962aa61d88f6bc32105f46be26efc7d5c6e4b017",
+                "a93c08a510f1f2046e6cd5ab2c2abdcaaaa62029d0e1cbb96d0d1272ff3bbfe5",
+                "7826db115727159cb26616730f844f8e7ec5675a901095491b91fc92e55fc8cc",
+                "bd95d9f72b0019f13d259a5587540dbd0a8a0bb54e864ec6cabcd3ffe0b5107f",
+                "eecd3f600bd79269b1d5b178559c1c67758b4ec429e62b12a464b5fa78561f0e",
+                "054e73c33956590eabbb04c2724860aa64076336b10638c0baeb889649b1ab09",
+                "996399e952ae16a8b512bf024f3ca8111a6221c8debbd9d6630da9fb1240c19f",
+                "b41d36fd8cf582a74a827377ba8d90cd6dc2238b4adf31f15b699bd2ad49e4f1",
+                "72cbde0cb2102dea87c5f24867c322d00f6f4046e9ac5457ca371ec24693dae9",
+                "f252ccabc3eeb35200d0ac6e3e331c0744c032ef802948a156651e1d899db508",
+                "d474864ae6a18318da68e97f3639b0704dd3de18ff26b1c9305943469efb02bd",
+                "8032f81798ec94c5ea83dabf4d768debfded2515d3ee3528f24c8d7e669b6db8",
+                "ff23cbfc6da4b13d2a0daf877e60369026bc6f26ed35177e3c80b3b8c170d557",
+                "b4fdbf66b8ab237928b44a15dcbefd674c755b2d511db8e217822c696b37b7ba",
+                "0538800484440aba1bfc82a5749570328760a3e2d5ae7e66b11c7cd168233154",
+                "a456db73f2f0a1b5e65d8d5ee3d63bea8e92b1ba8cdb674b3ee2e7d79ff1ec36",
+                "1eed2f69db61ffc5b7d4d96d55b2d8d5061bdbe8647e48694c81ae45537157d4",
+                "37d2930c68aec85b019b524b32a51d8d1d10d43c6bcf9256934d767f31f4585a"
+            ],
+            "rounds": 4,
+            "total_discovered": 181,
+            "total_rpc": 241,
+            "convergence_time": 0.49462060001678765,
+            "average_contacts": 10.9,
+            "min_contacts": 8,
+            "max_contacts": 16,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.65,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "054e73c33956590e",
+                    "0538800484440aba",
+                    "1eed2f69db61ffc5"
+                ],
+                "bucket_254": [
+                    "72cbde0cb2102dea",
+                    "6fdb0cf0af48ca08",
+                    "7826db115727159c"
+                ],
+                "bucket_255": [
+                    "b41d36fd8cf582a7",
+                    "ac03e31d3f76a8a0",
+                    "a93c08a510f1f204",
+                    "9c56f3e2f1246ea5"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 1
+        },
+        {
+            "scheme": "multi_seed",
+            "node_count": 20,
+            "node_ids": [
+                "9c56f3e2f1246ea5abbd934d7ffdd5a1f2252a9e5f9a798a076451fd0a45d016",
+                "6fdb0cf0af48ca089e09e09f9dec3b703edc73ab44be5456ccab246365d95aec",
+                "ac03e31d3f76a8a0ffe59b69962aa61d88f6bc32105f46be26efc7d5c6e4b017",
+                "a93c08a510f1f2046e6cd5ab2c2abdcaaaa62029d0e1cbb96d0d1272ff3bbfe5",
+                "7826db115727159cb26616730f844f8e7ec5675a901095491b91fc92e55fc8cc",
+                "bd95d9f72b0019f13d259a5587540dbd0a8a0bb54e864ec6cabcd3ffe0b5107f",
+                "eecd3f600bd79269b1d5b178559c1c67758b4ec429e62b12a464b5fa78561f0e",
+                "054e73c33956590eabbb04c2724860aa64076336b10638c0baeb889649b1ab09",
+                "996399e952ae16a8b512bf024f3ca8111a6221c8debbd9d6630da9fb1240c19f",
+                "b41d36fd8cf582a74a827377ba8d90cd6dc2238b4adf31f15b699bd2ad49e4f1",
+                "72cbde0cb2102dea87c5f24867c322d00f6f4046e9ac5457ca371ec24693dae9",
+                "f252ccabc3eeb35200d0ac6e3e331c0744c032ef802948a156651e1d899db508",
+                "d474864ae6a18318da68e97f3639b0704dd3de18ff26b1c9305943469efb02bd",
+                "8032f81798ec94c5ea83dabf4d768debfded2515d3ee3528f24c8d7e669b6db8",
+                "ff23cbfc6da4b13d2a0daf877e60369026bc6f26ed35177e3c80b3b8c170d557",
+                "b4fdbf66b8ab237928b44a15dcbefd674c755b2d511db8e217822c696b37b7ba",
+                "0538800484440aba1bfc82a5749570328760a3e2d5ae7e66b11c7cd168233154",
+                "a456db73f2f0a1b5e65d8d5ee3d63bea8e92b1ba8cdb674b3ee2e7d79ff1ec36",
+                "1eed2f69db61ffc5b7d4d96d55b2d8d5061bdbe8647e48694c81ae45537157d4",
+                "37d2930c68aec85b019b524b32a51d8d1d10d43c6bcf9256934d767f31f4585a"
+            ],
+            "rounds": 4,
+            "total_discovered": 195,
+            "total_rpc": 258,
+            "convergence_time": 0.5036590000381693,
+            "average_contacts": 11.05,
+            "min_contacts": 7,
+            "max_contacts": 15,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "054e73c33956590e",
+                    "0538800484440aba",
+                    "1eed2f69db61ffc5"
+                ],
+                "bucket_254": [
+                    "6fdb0cf0af48ca08",
+                    "7826db115727159c",
+                    "72cbde0cb2102dea"
+                ],
+                "bucket_255": [
+                    "9c56f3e2f1246ea5"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 1
+        },
+        {
+            "scheme": "star",
+            "node_count": 20,
+            "node_ids": [
+                "7d74ea9a62984e1eb9805e28d70b73b9b7d5b86de7b185cfefff730a6476862f",
+                "7d2f980d4e34dba44b90e2e75354378836e02e521933e2741598dc28a39dfa67",
+                "9d0d51b57ddac43e6cf887979f6bd45bf18e2cbfe2fc93e855f78cef1560b000",
+                "92f925441d0d73b00a2a0f9e311d8e7d048eed06001eb12d187c40581e6c0fb7",
+                "a857d3be95584a93124855704cf9e1d5b063533e764140b1424decf919138cb9",
+                "ea62bb9b8761a39d15e46f8a7cb04f5b82f87826a813aaa9af9273660f3c1a4d",
+                "f4f8ea947db602f489373f7202ce07012203dae7df4ad8e118268412195ef9df",
+                "ac2e1f84856ff1d6823507c6f449f088df17eb89ea6a292789c5a1d4ee1a82ce",
+                "068fc30b1af7bd45e73cbf9b6f5ea858e146727847a370a3a2a06c46e753e330",
+                "8de78147305edc69f718f3480ce49316746451a3752a24f0310d0013b4bad645",
+                "83c617c828ba016e8ca020e2dd4831ab47c7725a8851bab69fa888a15e9ae99d",
+                "3219f2ad80d69567fb62e0e87bc832b9f6d68d1ead5b3fcaeed2b596ddc70c7e",
+                "4478fed6e20b82be0ba5b0746bf8eca403dfaf24bee5c57c7ef4016362977857",
+                "5f1abc335be4414cfbfbc287070c4f979f570ab399b6ee5e0ec1aa790628ff0c",
+                "f94e976af6ff0cfe252a913dc028fee4d9aace86e39821c45a7030a9543140df",
+                "e0c2c25577956e0c940fc03e0daf853e9a9b55ff868d9c47256a7a0a98cd1370",
+                "68cf63d7204096e501f657780a26ece1b5f9bca3c7b61784018bcb8814157ab1",
+                "4a2f06470f5bbbba8a8dd9b7b50e111c697741325b44eecd2cd68746b6a5ba0e",
+                "ac4b19378b2572b1a8f09a84588feb09ac7288b467077130fc97a6b8608b0dd9",
+                "29cf34eaea18948f06f0e93f829c7d95d83a7050cb2948be8b1ca772bfc5ed2c"
+            ],
+            "rounds": 4,
+            "total_discovered": 141,
+            "total_rpc": 227,
+            "convergence_time": 0.6311642999062315,
+            "average_contacts": 9.55,
+            "min_contacts": 6,
+            "max_contacts": 13,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.15,
+            "sample_node_bucket_contents": {
+                "bucket_252": [
+                    "3219f2ad80d69567"
+                ],
+                "bucket_253": [
+                    "068fc30b1af7bd45"
+                ],
+                "bucket_254": [
+                    "7d74ea9a62984e1e",
+                    "68cf63d7204096e5",
+                    "7d2f980d4e34dba4",
+                    "4478fed6e20b82be"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 2
+        },
+        {
+            "scheme": "ring",
+            "node_count": 20,
+            "node_ids": [
+                "7d74ea9a62984e1eb9805e28d70b73b9b7d5b86de7b185cfefff730a6476862f",
+                "7d2f980d4e34dba44b90e2e75354378836e02e521933e2741598dc28a39dfa67",
+                "9d0d51b57ddac43e6cf887979f6bd45bf18e2cbfe2fc93e855f78cef1560b000",
+                "92f925441d0d73b00a2a0f9e311d8e7d048eed06001eb12d187c40581e6c0fb7",
+                "a857d3be95584a93124855704cf9e1d5b063533e764140b1424decf919138cb9",
+                "ea62bb9b8761a39d15e46f8a7cb04f5b82f87826a813aaa9af9273660f3c1a4d",
+                "f4f8ea947db602f489373f7202ce07012203dae7df4ad8e118268412195ef9df",
+                "ac2e1f84856ff1d6823507c6f449f088df17eb89ea6a292789c5a1d4ee1a82ce",
+                "068fc30b1af7bd45e73cbf9b6f5ea858e146727847a370a3a2a06c46e753e330",
+                "8de78147305edc69f718f3480ce49316746451a3752a24f0310d0013b4bad645",
+                "83c617c828ba016e8ca020e2dd4831ab47c7725a8851bab69fa888a15e9ae99d",
+                "3219f2ad80d69567fb62e0e87bc832b9f6d68d1ead5b3fcaeed2b596ddc70c7e",
+                "4478fed6e20b82be0ba5b0746bf8eca403dfaf24bee5c57c7ef4016362977857",
+                "5f1abc335be4414cfbfbc287070c4f979f570ab399b6ee5e0ec1aa790628ff0c",
+                "f94e976af6ff0cfe252a913dc028fee4d9aace86e39821c45a7030a9543140df",
+                "e0c2c25577956e0c940fc03e0daf853e9a9b55ff868d9c47256a7a0a98cd1370",
+                "68cf63d7204096e501f657780a26ece1b5f9bca3c7b61784018bcb8814157ab1",
+                "4a2f06470f5bbbba8a8dd9b7b50e111c697741325b44eecd2cd68746b6a5ba0e",
+                "ac4b19378b2572b1a8f09a84588feb09ac7288b467077130fc97a6b8608b0dd9",
+                "29cf34eaea18948f06f0e93f829c7d95d83a7050cb2948be8b1ca772bfc5ed2c"
+            ],
+            "rounds": 5,
+            "total_discovered": 220,
+            "total_rpc": 269,
+            "convergence_time": 0.5852078000316396,
+            "average_contacts": 12.0,
+            "min_contacts": 10,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.45,
+            "sample_node_bucket_contents": {
+                "bucket_252": [
+                    "3219f2ad80d69567"
+                ],
+                "bucket_253": [
+                    "068fc30b1af7bd45"
+                ],
+                "bucket_254": [
+                    "68cf63d7204096e5",
+                    "4a2f06470f5bbbba",
+                    "7d74ea9a62984e1e",
+                    "7d2f980d4e34dba4"
+                ],
+                "bucket_255": [
+                    "ac4b19378b2572b1",
+                    "9d0d51b57ddac43e",
+                    "92f925441d0d73b0",
+                    "a857d3be95584a93"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.048,
+            "trial": 2
+        },
+        {
+            "scheme": "tree",
+            "node_count": 20,
+            "node_ids": [
+                "7d74ea9a62984e1eb9805e28d70b73b9b7d5b86de7b185cfefff730a6476862f",
+                "7d2f980d4e34dba44b90e2e75354378836e02e521933e2741598dc28a39dfa67",
+                "9d0d51b57ddac43e6cf887979f6bd45bf18e2cbfe2fc93e855f78cef1560b000",
+                "92f925441d0d73b00a2a0f9e311d8e7d048eed06001eb12d187c40581e6c0fb7",
+                "a857d3be95584a93124855704cf9e1d5b063533e764140b1424decf919138cb9",
+                "ea62bb9b8761a39d15e46f8a7cb04f5b82f87826a813aaa9af9273660f3c1a4d",
+                "f4f8ea947db602f489373f7202ce07012203dae7df4ad8e118268412195ef9df",
+                "ac2e1f84856ff1d6823507c6f449f088df17eb89ea6a292789c5a1d4ee1a82ce",
+                "068fc30b1af7bd45e73cbf9b6f5ea858e146727847a370a3a2a06c46e753e330",
+                "8de78147305edc69f718f3480ce49316746451a3752a24f0310d0013b4bad645",
+                "83c617c828ba016e8ca020e2dd4831ab47c7725a8851bab69fa888a15e9ae99d",
+                "3219f2ad80d69567fb62e0e87bc832b9f6d68d1ead5b3fcaeed2b596ddc70c7e",
+                "4478fed6e20b82be0ba5b0746bf8eca403dfaf24bee5c57c7ef4016362977857",
+                "5f1abc335be4414cfbfbc287070c4f979f570ab399b6ee5e0ec1aa790628ff0c",
+                "f94e976af6ff0cfe252a913dc028fee4d9aace86e39821c45a7030a9543140df",
+                "e0c2c25577956e0c940fc03e0daf853e9a9b55ff868d9c47256a7a0a98cd1370",
+                "68cf63d7204096e501f657780a26ece1b5f9bca3c7b61784018bcb8814157ab1",
+                "4a2f06470f5bbbba8a8dd9b7b50e111c697741325b44eecd2cd68746b6a5ba0e",
+                "ac4b19378b2572b1a8f09a84588feb09ac7288b467077130fc97a6b8608b0dd9",
+                "29cf34eaea18948f06f0e93f829c7d95d83a7050cb2948be8b1ca772bfc5ed2c"
+            ],
+            "rounds": 5,
+            "total_discovered": 227,
+            "total_rpc": 276,
+            "convergence_time": 0.6227030999725685,
+            "average_contacts": 11.85,
+            "min_contacts": 10,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.45,
+            "sample_node_bucket_contents": {
+                "bucket_252": [
+                    "3219f2ad80d69567"
+                ],
+                "bucket_253": [
+                    "068fc30b1af7bd45"
+                ],
+                "bucket_254": [
+                    "7d74ea9a62984e1e",
+                    "7d2f980d4e34dba4",
+                    "4478fed6e20b82be",
+                    "4a2f06470f5bbbba"
+                ],
+                "bucket_255": [
+                    "8de78147305edc69",
+                    "a857d3be95584a93",
+                    "83c617c828ba016e",
+                    "9d0d51b57ddac43e"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0395,
+            "trial": 2
+        },
+        {
+            "scheme": "multi_seed",
+            "node_count": 20,
+            "node_ids": [
+                "7d74ea9a62984e1eb9805e28d70b73b9b7d5b86de7b185cfefff730a6476862f",
+                "7d2f980d4e34dba44b90e2e75354378836e02e521933e2741598dc28a39dfa67",
+                "9d0d51b57ddac43e6cf887979f6bd45bf18e2cbfe2fc93e855f78cef1560b000",
+                "92f925441d0d73b00a2a0f9e311d8e7d048eed06001eb12d187c40581e6c0fb7",
+                "a857d3be95584a93124855704cf9e1d5b063533e764140b1424decf919138cb9",
+                "ea62bb9b8761a39d15e46f8a7cb04f5b82f87826a813aaa9af9273660f3c1a4d",
+                "f4f8ea947db602f489373f7202ce07012203dae7df4ad8e118268412195ef9df",
+                "ac2e1f84856ff1d6823507c6f449f088df17eb89ea6a292789c5a1d4ee1a82ce",
+                "068fc30b1af7bd45e73cbf9b6f5ea858e146727847a370a3a2a06c46e753e330",
+                "8de78147305edc69f718f3480ce49316746451a3752a24f0310d0013b4bad645",
+                "83c617c828ba016e8ca020e2dd4831ab47c7725a8851bab69fa888a15e9ae99d",
+                "3219f2ad80d69567fb62e0e87bc832b9f6d68d1ead5b3fcaeed2b596ddc70c7e",
+                "4478fed6e20b82be0ba5b0746bf8eca403dfaf24bee5c57c7ef4016362977857",
+                "5f1abc335be4414cfbfbc287070c4f979f570ab399b6ee5e0ec1aa790628ff0c",
+                "f94e976af6ff0cfe252a913dc028fee4d9aace86e39821c45a7030a9543140df",
+                "e0c2c25577956e0c940fc03e0daf853e9a9b55ff868d9c47256a7a0a98cd1370",
+                "68cf63d7204096e501f657780a26ece1b5f9bca3c7b61784018bcb8814157ab1",
+                "4a2f06470f5bbbba8a8dd9b7b50e111c697741325b44eecd2cd68746b6a5ba0e",
+                "ac4b19378b2572b1a8f09a84588feb09ac7288b467077130fc97a6b8608b0dd9",
+                "29cf34eaea18948f06f0e93f829c7d95d83a7050cb2948be8b1ca772bfc5ed2c"
+            ],
+            "rounds": 4,
+            "total_discovered": 193,
+            "total_rpc": 260,
+            "convergence_time": 0.5744083999888971,
+            "average_contacts": 11.05,
+            "min_contacts": 7,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.4,
+            "sample_node_bucket_contents": {
+                "bucket_252": [
+                    "3219f2ad80d69567"
+                ],
+                "bucket_253": [
+                    "068fc30b1af7bd45"
+                ],
+                "bucket_254": [
+                    "5f1abc335be4414c",
+                    "7d74ea9a62984e1e",
+                    "7d2f980d4e34dba4",
+                    "4a2f06470f5bbbba"
+                ],
+                "bucket_255": [
+                    "83c617c828ba016e"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 2
+        },
+        {
+            "scheme": "star",
+            "node_count": 20,
+            "node_ids": [
+                "c14d7df6e10dc2a01996752379fe2567d57878ea02c6c2299949a2e5a5cd914d",
+                "77c5f5006b6393f4c2b21f1c63da4fa48f764c7f89e35780fbf80febf2638e50",
+                "1bf7234be186c226547574b246ba20837e3d131a8ca669a7029ebc58c58b73e4",
+                "2a5feaf098a81a47a913e33663934202bb88d804d5d6983e8176b8ca1eff93ec",
+                "298e3292fe2f49b69d7bfc82e961db357057a437f5310385c6b45a2d272666ee",
+                "bd3f5fe74f57a7fee03a2cd7bfd55831fe8a2947b2b148cb021bd0d0c00b5c21",
+                "d9e87891a8246195e5c13706f0d1974d03ed5a54c4a691a34ef4b25f61f14b03",
+                "a6eb645221484d47949a1bab9066ce7c1b78515f82072f7ea7ea80aeea969f39",
+                "dbccb2fe831e76aec6807144fb59eba6cdcb5181f6fdf7697c8485947fe898c6",
+                "5325f6cc0fe737ebcd3275ce2e8dd717eaca6b52e3de36f1c80434663147bf6b",
+                "fa14633e08d036de39f6b0b2017573fb4f756201f403bc0b18d600a70ce66ab6",
+                "68ddd8705eccbcadb081f423030bdb5de397815d835276eb2f951d5b38c814b3",
+                "2bcdfe38527b86b304a4050ad01a935e1e8ec2fe46fc79276bd3faa00c5c4f29",
+                "1ec19afa391f6a64dfac7a9c36200c4732dad228bb3b5f953b03d7d60b7e17eb",
+                "8d28fb4c0a202e7160eb56e90d0f98e903a296bb23657c670e882b4473990e77",
+                "3fc9736dc021bbe95739ac05719cc95e6d42b21ee43241471ed02b16652cda0d",
+                "07b332aae8b2e18bbcad85d40edc4fab7d2ff2486d52a0ddf84b169f26b8b60a",
+                "959fb4ab1983438e44aa8bbf62dc6c209c0c8cd99c3d5e064515d3269c5ab8ba",
+                "53a55eba9f2a8d056d998ffbdae328a453cdae4fa7846a9d550b1f371ae9e536",
+                "8bb5a07647b305ac709e0b7fc0537216107af180bb3f068bf7617365b00bfe61"
+            ],
+            "rounds": 4,
+            "total_discovered": 128,
+            "total_rpc": 213,
+            "convergence_time": 0.5549188000150025,
+            "average_contacts": 9.15,
+            "min_contacts": 7,
+            "max_contacts": 12,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.15,
+            "sample_node_bucket_contents": {
+                "bucket_250": [
+                    "8d28fb4c0a202e71"
+                ],
+                "bucket_252": [
+                    "959fb4ab1983438e"
+                ],
+                "bucket_253": [
+                    "bd3f5fe74f57a7fe",
+                    "a6eb645221484d47"
+                ],
+                "bucket_254": [
+                    "c14d7df6e10dc2a0",
+                    "dbccb2fe831e76ae",
+                    "d9e87891a8246195"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 3
+        },
+        {
+            "scheme": "ring",
+            "node_count": 20,
+            "node_ids": [
+                "c14d7df6e10dc2a01996752379fe2567d57878ea02c6c2299949a2e5a5cd914d",
+                "77c5f5006b6393f4c2b21f1c63da4fa48f764c7f89e35780fbf80febf2638e50",
+                "1bf7234be186c226547574b246ba20837e3d131a8ca669a7029ebc58c58b73e4",
+                "2a5feaf098a81a47a913e33663934202bb88d804d5d6983e8176b8ca1eff93ec",
+                "298e3292fe2f49b69d7bfc82e961db357057a437f5310385c6b45a2d272666ee",
+                "bd3f5fe74f57a7fee03a2cd7bfd55831fe8a2947b2b148cb021bd0d0c00b5c21",
+                "d9e87891a8246195e5c13706f0d1974d03ed5a54c4a691a34ef4b25f61f14b03",
+                "a6eb645221484d47949a1bab9066ce7c1b78515f82072f7ea7ea80aeea969f39",
+                "dbccb2fe831e76aec6807144fb59eba6cdcb5181f6fdf7697c8485947fe898c6",
+                "5325f6cc0fe737ebcd3275ce2e8dd717eaca6b52e3de36f1c80434663147bf6b",
+                "fa14633e08d036de39f6b0b2017573fb4f756201f403bc0b18d600a70ce66ab6",
+                "68ddd8705eccbcadb081f423030bdb5de397815d835276eb2f951d5b38c814b3",
+                "2bcdfe38527b86b304a4050ad01a935e1e8ec2fe46fc79276bd3faa00c5c4f29",
+                "1ec19afa391f6a64dfac7a9c36200c4732dad228bb3b5f953b03d7d60b7e17eb",
+                "8d28fb4c0a202e7160eb56e90d0f98e903a296bb23657c670e882b4473990e77",
+                "3fc9736dc021bbe95739ac05719cc95e6d42b21ee43241471ed02b16652cda0d",
+                "07b332aae8b2e18bbcad85d40edc4fab7d2ff2486d52a0ddf84b169f26b8b60a",
+                "959fb4ab1983438e44aa8bbf62dc6c209c0c8cd99c3d5e064515d3269c5ab8ba",
+                "53a55eba9f2a8d056d998ffbdae328a453cdae4fa7846a9d550b1f371ae9e536",
+                "8bb5a07647b305ac709e0b7fc0537216107af180bb3f068bf7617365b00bfe61"
+            ],
+            "rounds": 5,
+            "total_discovered": 207,
+            "total_rpc": 266,
+            "convergence_time": 0.653277900069952,
+            "average_contacts": 12.0,
+            "min_contacts": 11,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_250": [
+                    "8d28fb4c0a202e71"
+                ],
+                "bucket_252": [
+                    "959fb4ab1983438e"
+                ],
+                "bucket_253": [
+                    "a6eb645221484d47",
+                    "bd3f5fe74f57a7fe"
+                ],
+                "bucket_254": [
+                    "d9e87891a8246195",
+                    "dbccb2fe831e76ae",
+                    "fa14633e08d036de",
+                    "c14d7df6e10dc2a0"
+                ],
+                "bucket_255": [
+                    "53a55eba9f2a8d05",
+                    "1bf7234be186c226",
+                    "77c5f5006b6393f4",
+                    "07b332aae8b2e18b"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.039,
+            "trial": 3
+        },
+        {
+            "scheme": "tree",
+            "node_count": 20,
+            "node_ids": [
+                "c14d7df6e10dc2a01996752379fe2567d57878ea02c6c2299949a2e5a5cd914d",
+                "77c5f5006b6393f4c2b21f1c63da4fa48f764c7f89e35780fbf80febf2638e50",
+                "1bf7234be186c226547574b246ba20837e3d131a8ca669a7029ebc58c58b73e4",
+                "2a5feaf098a81a47a913e33663934202bb88d804d5d6983e8176b8ca1eff93ec",
+                "298e3292fe2f49b69d7bfc82e961db357057a437f5310385c6b45a2d272666ee",
+                "bd3f5fe74f57a7fee03a2cd7bfd55831fe8a2947b2b148cb021bd0d0c00b5c21",
+                "d9e87891a8246195e5c13706f0d1974d03ed5a54c4a691a34ef4b25f61f14b03",
+                "a6eb645221484d47949a1bab9066ce7c1b78515f82072f7ea7ea80aeea969f39",
+                "dbccb2fe831e76aec6807144fb59eba6cdcb5181f6fdf7697c8485947fe898c6",
+                "5325f6cc0fe737ebcd3275ce2e8dd717eaca6b52e3de36f1c80434663147bf6b",
+                "fa14633e08d036de39f6b0b2017573fb4f756201f403bc0b18d600a70ce66ab6",
+                "68ddd8705eccbcadb081f423030bdb5de397815d835276eb2f951d5b38c814b3",
+                "2bcdfe38527b86b304a4050ad01a935e1e8ec2fe46fc79276bd3faa00c5c4f29",
+                "1ec19afa391f6a64dfac7a9c36200c4732dad228bb3b5f953b03d7d60b7e17eb",
+                "8d28fb4c0a202e7160eb56e90d0f98e903a296bb23657c670e882b4473990e77",
+                "3fc9736dc021bbe95739ac05719cc95e6d42b21ee43241471ed02b16652cda0d",
+                "07b332aae8b2e18bbcad85d40edc4fab7d2ff2486d52a0ddf84b169f26b8b60a",
+                "959fb4ab1983438e44aa8bbf62dc6c209c0c8cd99c3d5e064515d3269c5ab8ba",
+                "53a55eba9f2a8d056d998ffbdae328a453cdae4fa7846a9d550b1f371ae9e536",
+                "8bb5a07647b305ac709e0b7fc0537216107af180bb3f068bf7617365b00bfe61"
+            ],
+            "rounds": 4,
+            "total_discovered": 203,
+            "total_rpc": 277,
+            "convergence_time": 0.5215007000369951,
+            "average_contacts": 12.25,
+            "min_contacts": 11,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_250": [
+                    "8d28fb4c0a202e71"
+                ],
+                "bucket_252": [
+                    "959fb4ab1983438e"
+                ],
+                "bucket_253": [
+                    "a6eb645221484d47",
+                    "bd3f5fe74f57a7fe"
+                ],
+                "bucket_254": [
+                    "c14d7df6e10dc2a0",
+                    "dbccb2fe831e76ae",
+                    "d9e87891a8246195",
+                    "fa14633e08d036de"
+                ],
+                "bucket_255": [
+                    "5325f6cc0fe737eb",
+                    "1bf7234be186c226",
+                    "2a5feaf098a81a47",
+                    "298e3292fe2f49b6"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 3
+        },
+        {
+            "scheme": "multi_seed",
+            "node_count": 20,
+            "node_ids": [
+                "c14d7df6e10dc2a01996752379fe2567d57878ea02c6c2299949a2e5a5cd914d",
+                "77c5f5006b6393f4c2b21f1c63da4fa48f764c7f89e35780fbf80febf2638e50",
+                "1bf7234be186c226547574b246ba20837e3d131a8ca669a7029ebc58c58b73e4",
+                "2a5feaf098a81a47a913e33663934202bb88d804d5d6983e8176b8ca1eff93ec",
+                "298e3292fe2f49b69d7bfc82e961db357057a437f5310385c6b45a2d272666ee",
+                "bd3f5fe74f57a7fee03a2cd7bfd55831fe8a2947b2b148cb021bd0d0c00b5c21",
+                "d9e87891a8246195e5c13706f0d1974d03ed5a54c4a691a34ef4b25f61f14b03",
+                "a6eb645221484d47949a1bab9066ce7c1b78515f82072f7ea7ea80aeea969f39",
+                "dbccb2fe831e76aec6807144fb59eba6cdcb5181f6fdf7697c8485947fe898c6",
+                "5325f6cc0fe737ebcd3275ce2e8dd717eaca6b52e3de36f1c80434663147bf6b",
+                "fa14633e08d036de39f6b0b2017573fb4f756201f403bc0b18d600a70ce66ab6",
+                "68ddd8705eccbcadb081f423030bdb5de397815d835276eb2f951d5b38c814b3",
+                "2bcdfe38527b86b304a4050ad01a935e1e8ec2fe46fc79276bd3faa00c5c4f29",
+                "1ec19afa391f6a64dfac7a9c36200c4732dad228bb3b5f953b03d7d60b7e17eb",
+                "8d28fb4c0a202e7160eb56e90d0f98e903a296bb23657c670e882b4473990e77",
+                "3fc9736dc021bbe95739ac05719cc95e6d42b21ee43241471ed02b16652cda0d",
+                "07b332aae8b2e18bbcad85d40edc4fab7d2ff2486d52a0ddf84b169f26b8b60a",
+                "959fb4ab1983438e44aa8bbf62dc6c209c0c8cd99c3d5e064515d3269c5ab8ba",
+                "53a55eba9f2a8d056d998ffbdae328a453cdae4fa7846a9d550b1f371ae9e536",
+                "8bb5a07647b305ac709e0b7fc0537216107af180bb3f068bf7617365b00bfe61"
+            ],
+            "rounds": 9,
+            "total_discovered": 244,
+            "total_rpc": 360,
+            "convergence_time": 1.265602800063789,
+            "average_contacts": 11.85,
+            "min_contacts": 10,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_250": [
+                    "8d28fb4c0a202e71"
+                ],
+                "bucket_252": [
+                    "959fb4ab1983438e"
+                ],
+                "bucket_253": [
+                    "a6eb645221484d47",
+                    "bd3f5fe74f57a7fe"
+                ],
+                "bucket_254": [
+                    "c14d7df6e10dc2a0",
+                    "d9e87891a8246195",
+                    "fa14633e08d036de",
+                    "dbccb2fe831e76ae"
+                ],
+                "bucket_255": [
+                    "2bcdfe38527b86b3",
+                    "2a5feaf098a81a47",
+                    "5325f6cc0fe737eb",
+                    "77c5f5006b6393f4"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0216,
+            "trial": 3
+        },
+        {
+            "scheme": "star",
+            "node_count": 20,
+            "node_ids": [
+                "48d2969d74f77f7f2b2c3487031aefd12fad761b41b336c469f04065aa4bbc18",
+                "1372fec91a7845c606d3cf0b1263d9166ca36f3dec029da2abfcc9101f4a23d5",
+                "3a8f173793c27950e3e30bbfee93f260908af6c6c07b9466a2863afd4e7d1af2",
+                "cd67a1956a5aaacc3fcf2d89468e06be6d94da2cca4383425b6f85b2d1004ab7",
+                "bdf7789dced3439d0d2f085689f381a50c5c1358569dbed31ed54cc5f8c27bfe",
+                "fe12558db2f56df3d32b772672968bc076ac4c9c4c6ce953c6f1e12e07e6ef4a",
+                "dd7aef9ca908c6172a50835c236f42be27985a064bb85ee592b41fcf29e2cb18",
+                "6aabbd8f3394e04d56765b8491e68a77a81565bc7edc73ee0bd812c0711eb46b",
+                "91455bb8fea2e28e2071f0076b4a1a8691c6bd4c1e3d6ca9ddff385deb070c62",
+                "18fcc10cb644f5650d018e047d6bfda57e967fdb95f47219e24e505beda916e9",
+                "2bdcd283068ca2cddd2181376669368a99e5199413ffda8b9cb75334d37c8d1d",
+                "9846ddfd20fe4f431791a9b7caeb76cfd6ad48f3103b5579301bb31553ad8a2b",
+                "db64816db46d4205118c118c06878ef37a4f219ab7982ac256e926a7eb7e2200",
+                "cd7ad77967c579a8985ae9fbed13cbb2d861f3daf0fa11b5686eb67bf5fb7bc3",
+                "69c815feb6addb936c29a97048f015ff8f8f01500d58eeb351a9bb6c8ec54b10",
+                "5b795443eeef231f2ee15c4af11ac3249f352b66091b1ee0056fbb5351326a8d",
+                "a5bed6e12afa4acb98d01a940d9235814f40e014008668d473e013e79e3edd5f",
+                "56670c36b96f81e9f7fec6b8c85144b5001d280378d29af2c8791d3623f0b16a",
+                "5f9d499b1266129d0d1de958573c25e68c249f860e14d80ba8ec651a9fc51dc5",
+                "692a9289b034d341fcf68ae6f49bd6c158e3b706ce6441b58208b7fdb7868677"
+            ],
+            "rounds": 4,
+            "total_discovered": 94,
+            "total_rpc": 193,
+            "convergence_time": 0.5876592000713572,
+            "average_contacts": 7.15,
+            "min_contacts": 4,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 3.7,
+            "sample_node_bucket_contents": {
+                "bucket_247": [
+                    "69c815feb6addb93"
+                ],
+                "bucket_249": [
+                    "6aabbd8f3394e04d"
+                ],
+                "bucket_253": [
+                    "48d2969d74f77f7f",
+                    "5b795443eeef231f",
+                    "5f9d499b1266129d",
+                    "56670c36b96f81e9"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 4
+        },
+        {
+            "scheme": "ring",
+            "node_count": 20,
+            "node_ids": [
+                "48d2969d74f77f7f2b2c3487031aefd12fad761b41b336c469f04065aa4bbc18",
+                "1372fec91a7845c606d3cf0b1263d9166ca36f3dec029da2abfcc9101f4a23d5",
+                "3a8f173793c27950e3e30bbfee93f260908af6c6c07b9466a2863afd4e7d1af2",
+                "cd67a1956a5aaacc3fcf2d89468e06be6d94da2cca4383425b6f85b2d1004ab7",
+                "bdf7789dced3439d0d2f085689f381a50c5c1358569dbed31ed54cc5f8c27bfe",
+                "fe12558db2f56df3d32b772672968bc076ac4c9c4c6ce953c6f1e12e07e6ef4a",
+                "dd7aef9ca908c6172a50835c236f42be27985a064bb85ee592b41fcf29e2cb18",
+                "6aabbd8f3394e04d56765b8491e68a77a81565bc7edc73ee0bd812c0711eb46b",
+                "91455bb8fea2e28e2071f0076b4a1a8691c6bd4c1e3d6ca9ddff385deb070c62",
+                "18fcc10cb644f5650d018e047d6bfda57e967fdb95f47219e24e505beda916e9",
+                "2bdcd283068ca2cddd2181376669368a99e5199413ffda8b9cb75334d37c8d1d",
+                "9846ddfd20fe4f431791a9b7caeb76cfd6ad48f3103b5579301bb31553ad8a2b",
+                "db64816db46d4205118c118c06878ef37a4f219ab7982ac256e926a7eb7e2200",
+                "cd7ad77967c579a8985ae9fbed13cbb2d861f3daf0fa11b5686eb67bf5fb7bc3",
+                "69c815feb6addb936c29a97048f015ff8f8f01500d58eeb351a9bb6c8ec54b10",
+                "5b795443eeef231f2ee15c4af11ac3249f352b66091b1ee0056fbb5351326a8d",
+                "a5bed6e12afa4acb98d01a940d9235814f40e014008668d473e013e79e3edd5f",
+                "56670c36b96f81e9f7fec6b8c85144b5001d280378d29af2c8791d3623f0b16a",
+                "5f9d499b1266129d0d1de958573c25e68c249f860e14d80ba8ec651a9fc51dc5",
+                "692a9289b034d341fcf68ae6f49bd6c158e3b706ce6441b58208b7fdb7868677"
+            ],
+            "rounds": 5,
+            "total_discovered": 212,
+            "total_rpc": 253,
+            "convergence_time": 0.6448344000382349,
+            "average_contacts": 11.65,
+            "min_contacts": 10,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_247": [
+                    "69c815feb6addb93"
+                ],
+                "bucket_249": [
+                    "6aabbd8f3394e04d"
+                ],
+                "bucket_253": [
+                    "48d2969d74f77f7f",
+                    "5b795443eeef231f",
+                    "56670c36b96f81e9",
+                    "5f9d499b1266129d"
+                ],
+                "bucket_254": [
+                    "3a8f173793c27950",
+                    "2bdcd283068ca2cd",
+                    "18fcc10cb644f565",
+                    "1372fec91a7845c6"
+                ],
+                "bucket_255": [
+                    "a5bed6e12afa4acb",
+                    "cd67a1956a5aaacc",
+                    "dd7aef9ca908c617",
+                    "91455bb8fea2e28e"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0591,
+            "trial": 4
+        },
+        {
+            "scheme": "tree",
+            "node_count": 20,
+            "node_ids": [
+                "48d2969d74f77f7f2b2c3487031aefd12fad761b41b336c469f04065aa4bbc18",
+                "1372fec91a7845c606d3cf0b1263d9166ca36f3dec029da2abfcc9101f4a23d5",
+                "3a8f173793c27950e3e30bbfee93f260908af6c6c07b9466a2863afd4e7d1af2",
+                "cd67a1956a5aaacc3fcf2d89468e06be6d94da2cca4383425b6f85b2d1004ab7",
+                "bdf7789dced3439d0d2f085689f381a50c5c1358569dbed31ed54cc5f8c27bfe",
+                "fe12558db2f56df3d32b772672968bc076ac4c9c4c6ce953c6f1e12e07e6ef4a",
+                "dd7aef9ca908c6172a50835c236f42be27985a064bb85ee592b41fcf29e2cb18",
+                "6aabbd8f3394e04d56765b8491e68a77a81565bc7edc73ee0bd812c0711eb46b",
+                "91455bb8fea2e28e2071f0076b4a1a8691c6bd4c1e3d6ca9ddff385deb070c62",
+                "18fcc10cb644f5650d018e047d6bfda57e967fdb95f47219e24e505beda916e9",
+                "2bdcd283068ca2cddd2181376669368a99e5199413ffda8b9cb75334d37c8d1d",
+                "9846ddfd20fe4f431791a9b7caeb76cfd6ad48f3103b5579301bb31553ad8a2b",
+                "db64816db46d4205118c118c06878ef37a4f219ab7982ac256e926a7eb7e2200",
+                "cd7ad77967c579a8985ae9fbed13cbb2d861f3daf0fa11b5686eb67bf5fb7bc3",
+                "69c815feb6addb936c29a97048f015ff8f8f01500d58eeb351a9bb6c8ec54b10",
+                "5b795443eeef231f2ee15c4af11ac3249f352b66091b1ee0056fbb5351326a8d",
+                "a5bed6e12afa4acb98d01a940d9235814f40e014008668d473e013e79e3edd5f",
+                "56670c36b96f81e9f7fec6b8c85144b5001d280378d29af2c8791d3623f0b16a",
+                "5f9d499b1266129d0d1de958573c25e68c249f860e14d80ba8ec651a9fc51dc5",
+                "692a9289b034d341fcf68ae6f49bd6c158e3b706ce6441b58208b7fdb7868677"
+            ],
+            "rounds": 5,
+            "total_discovered": 203,
+            "total_rpc": 283,
+            "convergence_time": 0.766057699918747,
+            "average_contacts": 12.05,
+            "min_contacts": 11,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.5,
+            "sample_node_bucket_contents": {
+                "bucket_247": [
+                    "69c815feb6addb93"
+                ],
+                "bucket_249": [
+                    "6aabbd8f3394e04d"
+                ],
+                "bucket_253": [
+                    "48d2969d74f77f7f",
+                    "5f9d499b1266129d",
+                    "56670c36b96f81e9",
+                    "5b795443eeef231f"
+                ],
+                "bucket_254": [
+                    "3a8f173793c27950",
+                    "1372fec91a7845c6",
+                    "18fcc10cb644f565",
+                    "2bdcd283068ca2cd"
+                ],
+                "bucket_255": [
+                    "fe12558db2f56df3",
+                    "cd67a1956a5aaacc",
+                    "dd7aef9ca908c617",
+                    "bdf7789dced3439d"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0343,
+            "trial": 4
+        },
+        {
+            "scheme": "multi_seed",
+            "node_count": 20,
+            "node_ids": [
+                "48d2969d74f77f7f2b2c3487031aefd12fad761b41b336c469f04065aa4bbc18",
+                "1372fec91a7845c606d3cf0b1263d9166ca36f3dec029da2abfcc9101f4a23d5",
+                "3a8f173793c27950e3e30bbfee93f260908af6c6c07b9466a2863afd4e7d1af2",
+                "cd67a1956a5aaacc3fcf2d89468e06be6d94da2cca4383425b6f85b2d1004ab7",
+                "bdf7789dced3439d0d2f085689f381a50c5c1358569dbed31ed54cc5f8c27bfe",
+                "fe12558db2f56df3d32b772672968bc076ac4c9c4c6ce953c6f1e12e07e6ef4a",
+                "dd7aef9ca908c6172a50835c236f42be27985a064bb85ee592b41fcf29e2cb18",
+                "6aabbd8f3394e04d56765b8491e68a77a81565bc7edc73ee0bd812c0711eb46b",
+                "91455bb8fea2e28e2071f0076b4a1a8691c6bd4c1e3d6ca9ddff385deb070c62",
+                "18fcc10cb644f5650d018e047d6bfda57e967fdb95f47219e24e505beda916e9",
+                "2bdcd283068ca2cddd2181376669368a99e5199413ffda8b9cb75334d37c8d1d",
+                "9846ddfd20fe4f431791a9b7caeb76cfd6ad48f3103b5579301bb31553ad8a2b",
+                "db64816db46d4205118c118c06878ef37a4f219ab7982ac256e926a7eb7e2200",
+                "cd7ad77967c579a8985ae9fbed13cbb2d861f3daf0fa11b5686eb67bf5fb7bc3",
+                "69c815feb6addb936c29a97048f015ff8f8f01500d58eeb351a9bb6c8ec54b10",
+                "5b795443eeef231f2ee15c4af11ac3249f352b66091b1ee0056fbb5351326a8d",
+                "a5bed6e12afa4acb98d01a940d9235814f40e014008668d473e013e79e3edd5f",
+                "56670c36b96f81e9f7fec6b8c85144b5001d280378d29af2c8791d3623f0b16a",
+                "5f9d499b1266129d0d1de958573c25e68c249f860e14d80ba8ec651a9fc51dc5",
+                "692a9289b034d341fcf68ae6f49bd6c158e3b706ce6441b58208b7fdb7868677"
+            ],
+            "rounds": 8,
+            "total_discovered": 154,
+            "total_rpc": 299,
+            "convergence_time": 0.8850644999183714,
+            "average_contacts": 10.1,
+            "min_contacts": 7,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.25,
+            "sample_node_bucket_contents": {
+                "bucket_247": [
+                    "69c815feb6addb93"
+                ],
+                "bucket_249": [
+                    "6aabbd8f3394e04d"
+                ],
+                "bucket_253": [
+                    "5f9d499b1266129d",
+                    "56670c36b96f81e9",
+                    "5b795443eeef231f",
+                    "48d2969d74f77f7f"
+                ],
+                "bucket_254": [
+                    "3a8f173793c27950",
+                    "1372fec91a7845c6",
+                    "18fcc10cb644f565",
+                    "2bdcd283068ca2cd"
+                ],
+                "bucket_255": [
+                    "cd67a1956a5aaacc",
+                    "db64816db46d4205",
+                    "a5bed6e12afa4acb",
+                    "fe12558db2f56df3"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0359,
+            "trial": 4
+        },
+        {
+            "scheme": "star",
+            "node_count": 20,
+            "node_ids": [
+                "fe5a0375a4943d6f30f6d7b459b6dfab4d07ea74ad25c693bc0d60136d0884fb",
+                "41803d3b1602dd706a60cb33c22d35ab87b53c03dc24c222ff25a364355cb944",
+                "ee3e07e643a9564bb6b4d47749814b5272de7e576793c420171f116b9a1f2ece",
+                "6830fe24ad02b871c7a9c36201370db2a56170661d4e74631faf200332922900",
+                "3227b2945df32d271116c072dfc75e6c41226faa42c704e97a68c921973e55d6",
+                "02f467f388739e7eb16854009f8ce060a2677e723024c6ec20065150ad3ae34e",
+                "e09b41aa785ee3474f4c9984183d57d568d44885ee57353e8ca0fdc1963dadc9",
+                "aa0433325d32af946783d9cb3226770cd5e175ae7ef6f261bbb053dc128e4740",
+                "07d2ea53a05b581a605e3ec7c91907e4407d0b571a5d75e565e822f7f5fd942b",
+                "42d3ea6226212708289ed8d5d09bbbdcac1a030a41c476b141ad3ba450743d74",
+                "6f663a70f8ecad61a2f097a46476702dd0c291e17e03c90be65def38ef1eef7f",
+                "4b79ed8119733400325a52dae6b42ebd5628254918603431a90db0c0294b6f4e",
+                "05977c4fae2668956ef05982f01af741bb808e19b9f95a661c9aefdbf5f4c8ef",
+                "6f61ae2966449b9f4d6191008f93ac85ffddc4b0b68f6df49405ccafddfad874",
+                "526afd65efaa4f746bf810e188d887c34db552560c8528d074a5d16ceb847510",
+                "52fbf294f5cb0710e7e5a8331d4b1d95d4f79594c5075cf4629dadab80262109",
+                "0e71daee93defff56cfcce10297dd496aa82d21e3c498d2c31d35169884d1a25",
+                "8f0309641d9fe58940d3c545615eda3d3961a99564a2c3f73170a3b6604fc9fa",
+                "3e692b2fe626b0afe32f2c5e6bb8d2eecb1ea906f7cf30b346de9d725d17a8c7",
+                "cf2d63ae00e1255fcd33c3836cb8f94d01628eb9f66f6ee3e0093b9ec3e9978f"
+            ],
+            "rounds": 4,
+            "total_discovered": 153,
+            "total_rpc": 242,
+            "convergence_time": 0.6361328000202775,
+            "average_contacts": 9.7,
+            "min_contacts": 5,
+            "max_contacts": 13,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.45,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "aa0433325d32af94",
+                    "8f0309641d9fe589"
+                ],
+                "bucket_255": [
+                    "41803d3b1602dd70",
+                    "6830fe24ad02b871",
+                    "02f467f388739e7e",
+                    "3227b2945df32d27"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 5
+        },
+        {
+            "scheme": "ring",
+            "node_count": 20,
+            "node_ids": [
+                "fe5a0375a4943d6f30f6d7b459b6dfab4d07ea74ad25c693bc0d60136d0884fb",
+                "41803d3b1602dd706a60cb33c22d35ab87b53c03dc24c222ff25a364355cb944",
+                "ee3e07e643a9564bb6b4d47749814b5272de7e576793c420171f116b9a1f2ece",
+                "6830fe24ad02b871c7a9c36201370db2a56170661d4e74631faf200332922900",
+                "3227b2945df32d271116c072dfc75e6c41226faa42c704e97a68c921973e55d6",
+                "02f467f388739e7eb16854009f8ce060a2677e723024c6ec20065150ad3ae34e",
+                "e09b41aa785ee3474f4c9984183d57d568d44885ee57353e8ca0fdc1963dadc9",
+                "aa0433325d32af946783d9cb3226770cd5e175ae7ef6f261bbb053dc128e4740",
+                "07d2ea53a05b581a605e3ec7c91907e4407d0b571a5d75e565e822f7f5fd942b",
+                "42d3ea6226212708289ed8d5d09bbbdcac1a030a41c476b141ad3ba450743d74",
+                "6f663a70f8ecad61a2f097a46476702dd0c291e17e03c90be65def38ef1eef7f",
+                "4b79ed8119733400325a52dae6b42ebd5628254918603431a90db0c0294b6f4e",
+                "05977c4fae2668956ef05982f01af741bb808e19b9f95a661c9aefdbf5f4c8ef",
+                "6f61ae2966449b9f4d6191008f93ac85ffddc4b0b68f6df49405ccafddfad874",
+                "526afd65efaa4f746bf810e188d887c34db552560c8528d074a5d16ceb847510",
+                "52fbf294f5cb0710e7e5a8331d4b1d95d4f79594c5075cf4629dadab80262109",
+                "0e71daee93defff56cfcce10297dd496aa82d21e3c498d2c31d35169884d1a25",
+                "8f0309641d9fe58940d3c545615eda3d3961a99564a2c3f73170a3b6604fc9fa",
+                "3e692b2fe626b0afe32f2c5e6bb8d2eecb1ea906f7cf30b346de9d725d17a8c7",
+                "cf2d63ae00e1255fcd33c3836cb8f94d01628eb9f66f6ee3e0093b9ec3e9978f"
+            ],
+            "rounds": 5,
+            "total_discovered": 217,
+            "total_rpc": 255,
+            "convergence_time": 0.6592727999668568,
+            "average_contacts": 11.9,
+            "min_contacts": 9,
+            "max_contacts": 15,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.65,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "8f0309641d9fe589",
+                    "aa0433325d32af94"
+                ],
+                "bucket_255": [
+                    "3e692b2fe626b0af",
+                    "41803d3b1602dd70",
+                    "6830fe24ad02b871",
+                    "3227b2945df32d27"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0721,
+            "trial": 5
+        },
+        {
+            "scheme": "tree",
+            "node_count": 20,
+            "node_ids": [
+                "fe5a0375a4943d6f30f6d7b459b6dfab4d07ea74ad25c693bc0d60136d0884fb",
+                "41803d3b1602dd706a60cb33c22d35ab87b53c03dc24c222ff25a364355cb944",
+                "ee3e07e643a9564bb6b4d47749814b5272de7e576793c420171f116b9a1f2ece",
+                "6830fe24ad02b871c7a9c36201370db2a56170661d4e74631faf200332922900",
+                "3227b2945df32d271116c072dfc75e6c41226faa42c704e97a68c921973e55d6",
+                "02f467f388739e7eb16854009f8ce060a2677e723024c6ec20065150ad3ae34e",
+                "e09b41aa785ee3474f4c9984183d57d568d44885ee57353e8ca0fdc1963dadc9",
+                "aa0433325d32af946783d9cb3226770cd5e175ae7ef6f261bbb053dc128e4740",
+                "07d2ea53a05b581a605e3ec7c91907e4407d0b571a5d75e565e822f7f5fd942b",
+                "42d3ea6226212708289ed8d5d09bbbdcac1a030a41c476b141ad3ba450743d74",
+                "6f663a70f8ecad61a2f097a46476702dd0c291e17e03c90be65def38ef1eef7f",
+                "4b79ed8119733400325a52dae6b42ebd5628254918603431a90db0c0294b6f4e",
+                "05977c4fae2668956ef05982f01af741bb808e19b9f95a661c9aefdbf5f4c8ef",
+                "6f61ae2966449b9f4d6191008f93ac85ffddc4b0b68f6df49405ccafddfad874",
+                "526afd65efaa4f746bf810e188d887c34db552560c8528d074a5d16ceb847510",
+                "52fbf294f5cb0710e7e5a8331d4b1d95d4f79594c5075cf4629dadab80262109",
+                "0e71daee93defff56cfcce10297dd496aa82d21e3c498d2c31d35169884d1a25",
+                "8f0309641d9fe58940d3c545615eda3d3961a99564a2c3f73170a3b6604fc9fa",
+                "3e692b2fe626b0afe32f2c5e6bb8d2eecb1ea906f7cf30b346de9d725d17a8c7",
+                "cf2d63ae00e1255fcd33c3836cb8f94d01628eb9f66f6ee3e0093b9ec3e9978f"
+            ],
+            "rounds": 4,
+            "total_discovered": 232,
+            "total_rpc": 275,
+            "convergence_time": 0.5819784000050277,
+            "average_contacts": 12.25,
+            "min_contacts": 9,
+            "max_contacts": 15,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.65,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "aa0433325d32af94",
+                    "8f0309641d9fe589"
+                ],
+                "bucket_255": [
+                    "42d3ea6226212708",
+                    "41803d3b1602dd70",
+                    "6f663a70f8ecad61",
+                    "6830fe24ad02b871"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 5
+        },
+        {
+            "scheme": "multi_seed",
+            "node_count": 20,
+            "node_ids": [
+                "fe5a0375a4943d6f30f6d7b459b6dfab4d07ea74ad25c693bc0d60136d0884fb",
+                "41803d3b1602dd706a60cb33c22d35ab87b53c03dc24c222ff25a364355cb944",
+                "ee3e07e643a9564bb6b4d47749814b5272de7e576793c420171f116b9a1f2ece",
+                "6830fe24ad02b871c7a9c36201370db2a56170661d4e74631faf200332922900",
+                "3227b2945df32d271116c072dfc75e6c41226faa42c704e97a68c921973e55d6",
+                "02f467f388739e7eb16854009f8ce060a2677e723024c6ec20065150ad3ae34e",
+                "e09b41aa785ee3474f4c9984183d57d568d44885ee57353e8ca0fdc1963dadc9",
+                "aa0433325d32af946783d9cb3226770cd5e175ae7ef6f261bbb053dc128e4740",
+                "07d2ea53a05b581a605e3ec7c91907e4407d0b571a5d75e565e822f7f5fd942b",
+                "42d3ea6226212708289ed8d5d09bbbdcac1a030a41c476b141ad3ba450743d74",
+                "6f663a70f8ecad61a2f097a46476702dd0c291e17e03c90be65def38ef1eef7f",
+                "4b79ed8119733400325a52dae6b42ebd5628254918603431a90db0c0294b6f4e",
+                "05977c4fae2668956ef05982f01af741bb808e19b9f95a661c9aefdbf5f4c8ef",
+                "6f61ae2966449b9f4d6191008f93ac85ffddc4b0b68f6df49405ccafddfad874",
+                "526afd65efaa4f746bf810e188d887c34db552560c8528d074a5d16ceb847510",
+                "52fbf294f5cb0710e7e5a8331d4b1d95d4f79594c5075cf4629dadab80262109",
+                "0e71daee93defff56cfcce10297dd496aa82d21e3c498d2c31d35169884d1a25",
+                "8f0309641d9fe58940d3c545615eda3d3961a99564a2c3f73170a3b6604fc9fa",
+                "3e692b2fe626b0afe32f2c5e6bb8d2eecb1ea906f7cf30b346de9d725d17a8c7",
+                "cf2d63ae00e1255fcd33c3836cb8f94d01628eb9f66f6ee3e0093b9ec3e9978f"
+            ],
+            "rounds": 4,
+            "total_discovered": 173,
+            "total_rpc": 235,
+            "convergence_time": 0.620110199903138,
+            "average_contacts": 10.35,
+            "min_contacts": 6,
+            "max_contacts": 14,
+            "non_full_nodes": 20,
+            "non_full_fraction": 1.0,
+            "avg_non_empty_buckets": 4.55,
+            "sample_node_bucket_contents": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "8f0309641d9fe589",
+                    "aa0433325d32af94"
+                ],
+                "bucket_255": [
+                    "6f663a70f8ecad61"
+                ]
+            },
+            "converged": true,
+            "operational_converged": true,
+            "final_lookup_success_rate": 1.0,
+            "final_contacts_delta": 0.0,
+            "trial": 5
+        }
+    ],
+    "summary": [
+        {
+            "scheme": "star",
+            "trials": 5,
+            "average_convergence_time": 0.5880770400166512,
+            "min_convergence_time": 0.5305101000703871,
+            "max_convergence_time": 0.6361328000202775,
+            "average_rpc": 213.8,
+            "min_rpc": 193,
+            "max_rpc": 242,
+            "average_contacts": 8.66,
+            "average_non_full_fraction": 1.0,
+            "average_non_empty_buckets": 4.04,
+            "sample_k_bucket_occupancy": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "aa0433325d32af94",
+                    "8f0309641d9fe589"
+                ],
+                "bucket_255": [
+                    "41803d3b1602dd70",
+                    "6830fe24ad02b871",
+                    "02f467f388739e7e",
+                    "3227b2945df32d27"
+                ]
+            },
+            "successful_convergence_runs": 5,
+            "convergence_success_rate": 1.0
+        },
+        {
+            "scheme": "ring",
+            "trials": 5,
+            "average_convergence_time": 0.6450648400001228,
+            "min_convergence_time": 0.5852078000316396,
+            "max_convergence_time": 0.6827312998939306,
+            "average_rpc": 261.4,
+            "min_rpc": 253,
+            "max_rpc": 269,
+            "average_contacts": 11.93,
+            "average_non_full_fraction": 1.0,
+            "average_non_empty_buckets": 4.55,
+            "sample_k_bucket_occupancy": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "8f0309641d9fe589",
+                    "aa0433325d32af94"
+                ],
+                "bucket_255": [
+                    "3e692b2fe626b0af",
+                    "41803d3b1602dd70",
+                    "6830fe24ad02b871",
+                    "3227b2945df32d27"
+                ]
+            },
+            "successful_convergence_runs": 5,
+            "convergence_success_rate": 1.0
+        },
+        {
+            "scheme": "tree",
+            "trials": 5,
+            "average_convergence_time": 0.5973720999900252,
+            "min_convergence_time": 0.49462060001678765,
+            "max_convergence_time": 0.766057699918747,
+            "average_rpc": 270.4,
+            "min_rpc": 241,
+            "max_rpc": 283,
+            "average_contacts": 11.86,
+            "average_non_full_fraction": 1.0,
+            "average_non_empty_buckets": 4.55,
+            "sample_k_bucket_occupancy": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "aa0433325d32af94",
+                    "8f0309641d9fe589"
+                ],
+                "bucket_255": [
+                    "42d3ea6226212708",
+                    "41803d3b1602dd70",
+                    "6f663a70f8ecad61",
+                    "6830fe24ad02b871"
+                ]
+            },
+            "successful_convergence_runs": 5,
+            "convergence_success_rate": 1.0
+        },
+        {
+            "scheme": "multi_seed",
+            "trials": 5,
+            "average_convergence_time": 0.769768979982473,
+            "min_convergence_time": 0.5036590000381693,
+            "max_convergence_time": 1.265602800063789,
+            "average_rpc": 282.4,
+            "min_rpc": 235,
+            "max_rpc": 360,
+            "average_contacts": 10.88,
+            "average_non_full_fraction": 1.0,
+            "average_non_empty_buckets": 4.4399999999999995,
+            "sample_k_bucket_occupancy": {
+                "bucket_253": [
+                    "fe5a0375a4943d6f",
+                    "ee3e07e643a9564b",
+                    "e09b41aa785ee347"
+                ],
+                "bucket_254": [
+                    "8f0309641d9fe589",
+                    "aa0433325d32af94"
+                ],
+                "bucket_255": [
+                    "6f663a70f8ecad61"
+                ]
+            },
+            "successful_convergence_runs": 5,
+            "convergence_success_rate": 1.0
+        }
+    ]
+}

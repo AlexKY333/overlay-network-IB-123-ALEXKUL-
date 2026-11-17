@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.key
+**/identity.key
+node_storage/
+test_*_state*/
+.git/

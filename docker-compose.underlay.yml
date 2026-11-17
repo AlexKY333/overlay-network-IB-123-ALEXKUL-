@@ -1,0 +1,78 @@
+networks:
+  net_left:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.1.0/24
+  net_right:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.2.0/24
+
+services:
+  # Узел B находится ТОЛЬКО в правой подсети (изолирован от A)
+  node_b:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: overlay_node_b
+    cap_add:
+      - NET_ADMIN
+    networks:
+      net_right:
+        ipv4_address: 172.28.2.20
+    environment:
+      - ROLE=dest
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./results:/app/results
+    command: ["python", "run_underlay_experiment.py"]
+
+  # Узел-ретранслятор подключен к ОБЕИМ подсетям (мост + tc/netem)
+  relay_node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: overlay_relay
+    cap_add:
+      - NET_ADMIN
+    networks:
+      net_left:
+        ipv4_address: 172.28.1.254
+      net_right:
+        ipv4_address: 172.28.2.254
+    environment:
+      - ROLE=relay
+      - NODE_B_IP=172.28.2.20
+      - NET_IFACE=eth0
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./results:/app/results
+    command: ["python", "run_underlay_experiment.py"]
+    depends_on:
+      - node_b
+
+  # Узел A находится ТОЛЬКО в левой подсети
+  node_a:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: overlay_node_a
+    cap_add:
+      - NET_ADMIN
+    networks:
+      net_left:
+        ipv4_address: 172.28.1.10
+    environment:
+      - ROLE=client
+      - NODE_A_IP=172.28.1.10
+      - NODE_B_IP=172.28.2.20
+      - RELAY_IP=172.28.1.254
+      - NET_IFACE=eth0
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./results:/app/results
+    command: ["python", "run_underlay_experiment.py"]
+    depends_on:
+      - relay_node
