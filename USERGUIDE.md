@@ -14,10 +14,10 @@ python demo_user.py
 ```
 
 ### 1.2. Полный приёмочный сценарий (`acceptance_demo.py`)
-Запускает живую TCP-сеть из N узлов и последовательно выполняет все приёмочные испытания раздела 23 ТЗ (проверка невырожденности DHT, репликация записи на R=3 узла, чтение после отказа хранителя, передача сообщения через 3 ретранслятора, инъекция отказа ретранслятора и автоматическое восстановление доставки):
+Запускает живую TCP-сеть из `N` узлов и последовательно выполняет все приёмочные испытания раздела 23 ТЗ (проверка невырожденности DHT, репликация записи на `R = 3` узла, чтение после отказа хранителя, передача сообщения через 3 ретранслятора, инъекция отказа ретранслятора и автоматическое восстановление доставки):
 
 ```powershell
-# Запуск с параметрами по умолчанию из config.json (N=20, k=4, hops=3, R=3)
+# Запуск с параметрами по умолчанию из config.json (N = 20, k = 4, hops = 3, R = 3)
 python acceptance_demo.py
 
 # Запуск с пользовательскими параметрами через флаги командной строки
@@ -29,6 +29,23 @@ python acceptance_demo.py --nodes 20 --k 4 --hops 3 --r 3
 - `--k` — ёмкость одного `k-bucket` таблицы маршрутизации (по умолчанию `4`, можно указать `3` для сравнительного анализа);
 - `--hops` — количество промежуточных ретрансляторов в туннеле (по умолчанию `3`);
 - `--r` — фактор репликации записей в Kademlia DHT (по умолчанию `3`).
+
+### 1.3. Интерактивный пульт управления (`interactive_cli.py`)
+Позволяет вручную пошагово проверять любой пункт программы приёмочных испытаний (Раздел 23 ТЗ) в живой консоли:
+
+```powershell
+python interactive_cli.py
+```
+
+Поддерживаемые команды в `overlay-cli>`:
+- `1` или `init [N] [k] [scheme]` — создание живой TCP-сети (например, `init 20 4 multi_seed` или `init 15 3 ring`);
+- `2` или `lookup` — итеративный поиск отсутствующего в таблице узла через DHT;
+- `3` или `store [alias]` — подпись и репликация `NodeRecord` на `R = 3` узла;
+- `4` или `kill_keeper` — отказ одного хранителя и чтение записи через `FIND_VALUE` с живой реплики;
+- `5` или `send [текст]` — построение 3-хопового туннеля (`AKE + AES-256-GCM`) и сквозная отправка сообщения;
+- `6` или `kill_relay` — отказ активного ретранслятора и автоматическое восстановление доставки;
+- `7` или `all` — автоматический прогон всех шагов 1–6 подряд;
+- `0` или `exit` — корректная остановка узлов и выход.
 
 ---
 
@@ -42,7 +59,7 @@ python acceptance_demo.py --nodes 20 --k 4 --hops 3 --r 3
 |                                                                          |
 |  +----------------+  +--------------------+  +------------------------+  |
 |  |    Identity    |  |    RoutingTable    |  |       DHTStorage       |  |
-|  | (Ed25519 / ID) |  | (k-bucket, alpha=3)|  | (R=3, Quorum, Rollback)|  |
+|  | (Ed25519 / ID) |  | (k-bucket, α = 3)  |  | (R=3, Quorum, Rollback)|  |
 |  +----------------+  +--------------------+  +------------------------+  |
 |                                                                          |
 |  +--------------------+  +--------------------+  +--------------------+  |
@@ -57,8 +74,8 @@ python acceptance_demo.py --nodes 20 --k 4 --hops 3 --r 3
 | Метод фасада | Назначение |
 |---|---|
 | `await node.join(bootstrap_peers, timeout)` | Подключение к сети через список начальных контактов с валидацией по TCP `PING` и наполнением `k-bucket`. |
-| `await node.lookup_node(target_node_id, timeout)` | Итеративный поиск ближайших узлов к цели (alpha=3) по сети TCP. |
-| `await node.put_record(record)` | Локальное сохранение и сетевая репликация подписанной `NodeRecord` на R=3 узла (кворум 2/3). |
+| `await node.lookup_node(target_node_id, timeout)` | Итеративный поиск ближайших узлов к цели (`α = 3`) по сети TCP. |
+| `await node.put_record(record)` | Локальное сохранение и сетевая репликация подписанной `NodeRecord` на `R = 3` узла (кворум `2/3`). |
 | `await node.get_record(key)` | Поиск адресной записи в локальном хранилище и через итеративный `FIND_VALUE` в DHT. |
 | `await node.resolve_alias(alias)` | Разрешение человекочитаемого псевдонима по ключу `SHA-256("alias:" \|\| normalize(alias))`. |
 | `node.build_tunnel(destination_node_id, relay_count, strategy)` | Построение многопереходного туннеля (`ranked` или `random`) и регистрация в `TunnelPool`. |
@@ -92,7 +109,7 @@ bootstrap_peers = [
 discovered = await node.join(bootstrap_peers, timeout=2.5)
 print(f"Обнаружено и добавлено контактов: {discovered}")
 
-# 3. Итеративный поиск целевого узла в DHT (alpha = 3)
+# 3. Итеративный поиск целевого узла в DHT (α = 3)
 target_id = "f" * 64
 closest_contacts = await node.lookup_node(target_id, timeout=2.5)
 print(f"Найдено ближайших контактов: {len(closest_contacts)}")
@@ -117,7 +134,7 @@ record = NodeRecord.create_signed(
 )
 
 replicas_ack = await node.put_record(record)
-print(f"Запись подтверждена {replicas_ack} репликами (кворум >= 2)")
+print(f"Запись подтверждена {replicas_ack} репликами (кворум ≥ 2)")
 
 # 2. Поиск записи по 64-символьному NodeID
 found_by_id = await node.get_record(node.node_id)
@@ -145,7 +162,9 @@ profiles = [
     RelayProfile(node_id=102, ema_latency=0.07, ema_success=0.98, subnet="10.0.2.0/24"),
     RelayProfile(node_id=103, ema_latency=0.11, ema_success=0.96, subnet="10.0.3.0/24"),
 ]
-node.relay_selector = RelaySelector(profiles)
+selector = RelaySelector(profiles)
+node.relay_selector = selector
+node.tunnel_builder.relay_selector = selector
 
 # 2. Построение туннеля из 3 ретрансляторов через фасад
 tunnel = node.build_tunnel(
@@ -206,20 +225,3 @@ print(f"Контактов в k-bucket: {state['routing_contacts']}")
 print(f"Записей в DHTStorage: {state['stored_records']}")
 print(f"Туннелей (активных / всего): {state['tunnels_active']} / {state['tunnels_total']}")
 ```
-
-
-
-
-### 1.3. Интерактивный пульт управления (`interactive_cli.py`)
-Позволяет пошагово проверять любой пункт программы испытаний (Раздел 23 ТЗ) в интерактивной консоли:
-```powershell
-python interactive_cli.py
-
-Поддерживаемые команды в overlay-cli>:
-init [N] [k] [scheme] — создание живой TCP-сети (например, init 20 4 multi_seed);
-lookup — поиск отсутствующей цели через DHT;
-store [alias] — публикация и репликация записи на R=3 узла;
-kill_keeper — отказ хранителя и чтение с живой реплики;
-send [текст] — построение туннеля (AKE + AES-GCM) и передача данных;
-kill_relay — отказ ретранслятора и самовосстановление маршрута;
-all — автоматический прогон всех шагов подряд.
