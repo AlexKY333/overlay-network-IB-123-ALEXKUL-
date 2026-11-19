@@ -4,18 +4,125 @@
     "admissible_count": 5,
     "random": {
         "selection_counts": {
-            "1": 190,
-            "2": 208,
-            "3": 207,
-            "4": 202,
-            "5": 193
+            "1": 199,
+            "2": 201,
+            "3": 195,
+            "4": 207,
+            "5": 198
         },
-        "average_latency": 0.4222
+        "average_latency": 0.42965000000000003,
+        "latency_stats": {
+            "observations": 1000,
+            "min": 0.1,
+            "median": 0.4,
+            "average": 0.4297,
+            "p95": 0.8,
+            "max": 0.8
+        }
     },
     "ranked": {
         "selection_counts": {
             "3": 1000
         },
-        "average_latency": 0.10000000000000002
-    }
+        "average_latency": 0.10000000000000002,
+        "latency_stats": {
+            "observations": 1000,
+            "min": 0.1,
+            "median": 0.1,
+            "average": 0.1,
+            "p95": 0.1,
+            "max": 0.1
+        }
+    },
+    "metadata": {
+        "scenario": "relay_selection_strategy_comparison",
+        "code_version": "ed11762",
+        "seed": 42,
+        "started_at_utc": "2026-11-19T13:20:58.507640+00:00",
+        "time_base": "time.perf_counter",
+        "elapsed_s": 0.0658,
+        "N": 20,
+        "k": 4,
+        "ALPHA": 3,
+        "R": 3,
+        "timeouts": {
+            "network_timeout_s": 2.5
+        },
+        "bootstrap_graph": "not_applicable (isolated relay selector benchmark)",
+        "netem": "none",
+        "config": {
+            "N_NODES": 20,
+            "NODE_ID_BITS": 256,
+            "K_BUCKET_SIZE": 4,
+            "ALPHA": 3,
+            "REPLICATION_FACTOR": 3,
+            "REPLICATION_QUORUM": 2,
+            "RECORD_TTL": 240,
+            "REFRESH_INTERVAL": 30.0,
+            "REPUBLISH_INTERVAL": 60.0,
+            "NETWORK_TIMEOUT": 2.5,
+            "TUNNEL_RELAY_COUNT": 3,
+            "TUNNEL_POOL_SIZE": 3,
+            "DEGRADATION_CONSECUTIVE_FAILURES": 3,
+            "MAX_FRAME_PAYLOAD": 65536,
+            "FILE_CHUNK_SIZE": 32768
+        }
+    },
+    "profiles": [
+        {
+            "node_id": 1,
+            "subnet": "10.0.1.0/24",
+            "success_count": 9,
+            "failure_count": 0,
+            "ema_success": 1.0,
+            "ema_latency": 0.8,
+            "last_seen": null,
+            "consecutive_failures": 0,
+            "is_healthy": true
+        },
+        {
+            "node_id": 2,
+            "subnet": "10.0.2.0/24",
+            "success_count": 8,
+            "failure_count": 0,
+            "ema_success": 1.0,
+            "ema_latency": 0.4,
+            "last_seen": null,
+            "consecutive_failures": 0,
+            "is_healthy": true
+        },
+        {
+            "node_id": 3,
+            "subnet": "10.0.3.0/24",
+            "success_count": 10,
+            "failure_count": 0,
+            "ema_success": 1.0,
+            "ema_latency": 0.1,
+            "last_seen": null,
+            "consecutive_failures": 0,
+            "is_healthy": true
+        },
+        {
+            "node_id": 4,
+            "subnet": "10.0.4.0/24",
+            "success_count": 6,
+            "failure_count": 0,
+            "ema_success": 1.0,
+            "ema_latency": 0.25,
+            "last_seen": null,
+            "consecutive_failures": 0,
+            "is_healthy": true
+        },
+        {
+            "node_id": 5,
+            "subnet": "10.0.5.0/24",
+            "success_count": 7,
+            "failure_count": 0,
+            "ema_success": 1.0,
+            "ema_latency": 0.6,
+            "last_seen": null,
+            "consecutive_failures": 2,
+            "is_healthy": true
+        }
+    ]
 }

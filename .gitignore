@@ -29,3 +29,14 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Private keys and node state directories (prohibited in repo by TZ §9, §22)
+*.key
+*.pem
+**/identity.key
+test_*_state*/
+node_storage/
+downloads/
+
+# Local notes
+src - модули*.txt
