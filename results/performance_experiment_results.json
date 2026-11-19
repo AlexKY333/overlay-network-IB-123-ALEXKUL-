@@ -1,18 +1,18 @@
 {
-  "timestamp": 1792081235.8792613,
+  "timestamp": 1795097862.261973,
   "latency_metrics": {
     "cold_session_handshake_first_message": {
       "count": 30,
-      "min": 0.00081,
-      "max": 0.017576,
-      "median": 0.000839,
-      "mean": 0.001403,
-      "p95": 0.000905
+      "min": 0.000823,
+      "max": 0.018482,
+      "median": 0.000864,
+      "mean": 0.00148,
+      "p95": 0.001058
     },
     "warm_session_established_message": {
       "count": 30,
       "min": 1.1e-05,
-      "max": 1.5e-05,
+      "max": 1.4e-05,
       "median": 1.2e-05,
       "mean": 1.2e-05,
       "p95": 1.3e-05
@@ -26,10 +26,10 @@
       "protocol_overhead_percent": 0.852,
       "goodput_kib_s": {
         "count": 5,
-        "min": 95111.272089,
-        "max": 221827.891028,
-        "median": 213310.545071,
-        "mean": 180597.071284,
+        "min": 51012.599448,
+        "max": 171379.600166,
+        "median": 136911.286421,
+        "mean": 128142.678891,
         "p95": null
       }
     },
@@ -40,10 +40,10 @@
       "protocol_overhead_percent": 0.677,
       "goodput_kib_s": {
         "count": 5,
-        "min": 93083.293631,
-        "max": 146685.95836,
-        "median": 141147.930729,
-        "mean": 130403.023036,
+        "min": 132059.168341,
+        "max": 139336.788016,
+        "median": 135674.064957,
+        "mean": 135506.950678,
         "p95": null
       }
     },
@@ -54,10 +54,10 @@
       "protocol_overhead_percent": 0.681,
       "goodput_kib_s": {
         "count": 5,
-        "min": 127960.33262,
-        "max": 148125.860772,
-        "median": 136041.04585,
-        "mean": 137474.224612,
+        "min": 136457.281071,
+        "max": 154489.55099,
+        "median": 142656.532331,
+        "mean": 145925.589978,
         "p95": null
       }
     }
@@ -65,11 +65,11 @@
   "tunnel_performance_metrics": {
     "tunnel_build_time_s": {
       "count": 30,
-      "min": 6.8e-05,
-      "max": 0.000285,
-      "median": 8.5e-05,
-      "mean": 0.000104,
-      "p95": 0.000142
+      "min": 7.4e-05,
+      "max": 0.000246,
+      "median": 7.6e-05,
+      "mean": 8.7e-05,
+      "p95": 0.000102
     },
     "failure_detection_time_s": {
       "count": 30,
@@ -77,23 +77,23 @@
       "max": 3e-06,
       "median": 1e-06,
       "mean": 1e-06,
-      "p95": 2e-06
+      "p95": 1e-06
     },
     "failover_switch_time_s": {
       "count": 30,
-      "min": 7.1e-05,
-      "max": 0.000165,
-      "median": 8.8e-05,
-      "mean": 0.0001,
-      "p95": 0.000137
+      "min": 7.8e-05,
+      "max": 0.000133,
+      "median": 8e-05,
+      "mean": 8.6e-05,
+      "p95": 0.000105
     },
     "total_recovery_delivery_time_s": {
       "count": 30,
-      "min": 7.2e-05,
-      "max": 0.000169,
-      "median": 8.9e-05,
-      "mean": 0.000101,
-      "p95": 0.000139
+      "min": 7.9e-05,
+      "max": 0.000136,
+      "median": 8.1e-05,
+      "mean": 8.7e-05,
+      "p95": 0.000107
     }
   },
   "dht_churn_resilience": {

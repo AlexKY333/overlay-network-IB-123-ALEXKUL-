@@ -25,6 +25,34 @@ from secure_channel import SecureChannel
 from secure_session import SecureSession
 
 
+def get_safe_report_path(default_path: Path, is_docker_split: bool) -> Path:
+    """
+    Защищает боевой Docker-отчёт (Linux tc/netem в изолированных подсетях)
+    от перезаписи при локальном запуске run_all.py на Windows.
+    """
+    if not is_docker_split and default_path.exists():
+        try:
+            existing = json.loads(default_path.read_text(encoding="utf-8"))
+            is_existing_docker = (
+                existing.get("is_docker_split") is True
+                or existing.get("execution_mode") == "docker_linux_tc_netem"
+                or float(existing.get("measured_latency_s", 0.0)) >= 0.35
+            )
+            if is_existing_docker:
+                local_path = default_path.with_name(
+                    "underlay_experiment_local_report.json"
+                )
+                print(
+                    f"[INFO] В {default_path.name} уже сохранён боевой Docker-отчёт "
+                    f"(Linux tc/netem) — оставляем его без изменений."
+                )
+                print(f"[INFO] Результат локального прогона будет записан в {local_path.name}.")
+                return local_path
+        except Exception:
+            pass
+    return default_path
+
+
 def check_direct_ip_reachability(target_ip: str, target_port: int = 9100) -> bool:
     """
     Проверяет прямую IP/TCP-достижимость узла B в обход ретранслятора.
@@ -259,7 +287,10 @@ async def main():
     med_lat = statistics.median(latencies)
     avg_lat = statistics.mean(latencies)
 
-    print(f"-> Статистика задержки (n={trials}): min={min_lat:.4f}s, median={med_lat:.4f}s, avg={avg_lat:.4f}s, max={max_lat:.4f}s")
+    print(
+        f"-> Статистика задержки (n={trials}): "
+        f"min={min_lat:.4f}s, median={med_lat:.4f}s, avg={avg_lat:.4f}s, max={max_lat:.4f}s"
+    )
     print(f"-> Итоговая EMA задержки в профиле: {profile.ema_latency:.4f} сек.")
     print(f"-> Relay здоров (is_healthy): {profile.is_healthy()}")
 
@@ -274,6 +305,8 @@ async def main():
 
     report = {
         "scenario": "isolated_underlay_and_netem",
+        "execution_mode": "docker_linux_tc_netem" if (is_docker_split and is_linux) else "local_simulated_delay",
+        "is_docker_split": is_docker_split,
         "configuration": {
             "n_nodes": N_NODES,
             "k_bucket_size": K_BUCKET_SIZE,
@@ -286,6 +319,7 @@ async def main():
         },
         "observations": trials,
         "netem_applied": True,
+        "linux_tc_netem_applied": netem_applied,
         "direct_ip_blocked": direct_ip_blocked,
         "tunnel_delivery_success": True,
         "latency_stats_s": {
@@ -299,7 +333,10 @@ async def main():
         "relay_ema_latency": round(profile.ema_latency, 4),
     }
 
-    out_file = RESULTS_DIR / "underlay_experiment_report.json"
+    out_file = get_safe_report_path(
+        RESULTS_DIR / "underlay_experiment_report.json",
+        is_docker_split=is_docker_split,
+    )
     out_file.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n[ИТОГ] Отчет сохранен в {out_file.resolve()}")
     print("=" * 75)

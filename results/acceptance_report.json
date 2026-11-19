@@ -1,8 +1,8 @@
 {
-  "timestamp": 1792080470.0283964,
+  "timestamp": 1795097888.9018717,
   "applied_config": {
-    "n_nodes": 15,
-    "k_bucket_size": 3,
+    "n_nodes": 20,
+    "k_bucket_size": 4,
     "alpha": 3,
     "replication_factor": 3,
     "replication_quorum": 2,

@@ -1,0 +1,35 @@
+{
+  "scenario": "isolated_underlay_and_netem",
+  "execution_mode": "local_simulated_delay",
+  "is_docker_split": false,
+  "configuration": {
+    "n_nodes": 20,
+    "k_bucket_size": 4,
+    "alpha": 3,
+    "replication_factor": 3,
+    "left_subnet": "172.28.1.0/24",
+    "right_subnet": "172.28.2.0/24",
+    "netem_delay_ms": 150,
+    "netem_jitter_ms": 10
+  },
+  "observations": 5,
+  "netem_applied": true,
+  "linux_tc_netem_applied": false,
+  "direct_ip_blocked": true,
+  "tunnel_delivery_success": true,
+  "latency_stats_s": {
+    "min": 0.1455,
+    "max": 0.1612,
+    "median": 0.1606,
+    "average": 0.157,
+    "raw_samples": [
+      0.1606,
+      0.1612,
+      0.1455,
+      0.1566,
+      0.161
+    ]
+  },
+  "measured_latency_s": 0.157,
+  "relay_ema_latency": 0.1582
+}
